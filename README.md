@@ -3,10 +3,9 @@
 Hero, the evil army of shapes is attacking!
 
 They want one thing:
-your MEAT
+Your MEAT!
 
-Here, take this mace.
-Protect thy meat!
+Terrifying, I know. Here, take this mace, fight them off for as long as you can!
 
 [Play it in your browser!](https://fishwash.github.io/pointer-mace/)
 
