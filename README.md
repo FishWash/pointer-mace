@@ -8,7 +8,7 @@ your MEAT
 Here, take this mace.
 Protect thy meat!
 
-[Play it here](https://fishwash.github.io/pointer-mace/)
+[Play it in your browser!](https://fishwash.github.io/pointer-mace/)
 
 ## Tools Used:
 - [Unity](https://unity.com/)
