@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class UIPointsDisplay : MonoBehaviour
 {
     [SerializeField] string prefix = "";
-    [SerializeField] bool gradualIncrease;
+    [SerializeField] bool gradualIncrease = false;
 
-    Text text;
+    Text text = null;
     float displayPoints = 0;
 
     void Start() {

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class UIConditionalDisplay : MonoBehaviour
 {
-    [SerializeField] Global.GameState gameStateToDisplayOn;
-    Global.GameState lastGameState;
+    [SerializeField] Global.GameState gameStateToDisplayOn = 0;
+    Global.GameState lastGameState = 0;
 
     void Update() {
         if (Global.gameState != lastGameState) {

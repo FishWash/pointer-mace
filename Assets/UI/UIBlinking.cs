@@ -8,11 +8,11 @@ public class UIBlinking : MonoBehaviour
     [SerializeField] float blinkTime = 1.0f;
 
     Text text;
-    Timer blinkTimer;
+    RealTimer blinkTimer;
 
     void Start() {
         text = GetComponent<Text>();
-        blinkTimer = new Timer();
+        blinkTimer = new RealTimer();
     }
 
     void Update() {

@@ -13,8 +13,15 @@ public class Global : MonoBehaviour
 
     public Vector3 enemyGoal = Vector3.zero;
 
+    [SerializeField] GameObject hitsparkPrefab = null;
+
     void Start() {
         Instance = this;
         points = 0;
+    }
+
+    public static void InstantiateHitspark(Vector3 position, Quaternion rotation) 
+    {
+        Instantiate(Instance.hitsparkPrefab, position, rotation);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Timer
 {
-    float endTime;
+    protected float endTime;
 
     public bool isDone {
         get {
