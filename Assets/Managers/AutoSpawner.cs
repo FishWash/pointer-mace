@@ -6,6 +6,8 @@ public class AutoSpawner : MonoBehaviour
 {
     public static AutoSpawner Instance;
 
+    public int wave = 0;
+
     [SerializeField] GameObject dotPrefab = null;
     [SerializeField] GameObject blockPrefab = null;
     [SerializeField] GameObject triPrefab = null;
@@ -21,8 +23,6 @@ public class AutoSpawner : MonoBehaviour
 
     [SerializeField] float baseBreakTime = 5.0f;
     [SerializeField] float breakTimeWaveMult = 0.1f;
-
-    [HideInInspector] public int wave = 0;
     bool onBreak = true;
 
     float spawnTime, waveTime, breakTime;

@@ -6,12 +6,21 @@ public class MoveToCenter : MonoBehaviour
 {
     new Rigidbody2D rigidbody;
     [SerializeField] float moveSpeed = 1;
+    Enemy myEnemy;
 
     void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
+        myEnemy = GetComponent<Enemy>();
     }
 
-    void Update() {
+    void Update() 
+    {
+        if (myEnemy) {
+            if (!myEnemy.isAlive) {
+                return;
+            }
+        }
+
         //Move
         rigidbody.MovePosition(
             Vector3.MoveTowards(

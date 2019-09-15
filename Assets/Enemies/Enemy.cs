@@ -10,11 +10,16 @@ public class Enemy : Hittable
     
     [SerializeField] float maxHealth = 50;
     [SerializeField] float pointValue = 1;
+    [HideInInspector] public bool isAlive;
     float health;
 
     void Start() {
         rigidbody = GetComponent<Rigidbody2D>();
+        isAlive = true;
         health = maxHealth;
+    }
+
+    void Update() {
     }
 
     public override void Hit(Vector3 velocity, float mass) {
@@ -24,9 +29,13 @@ public class Enemy : Hittable
         
         health -= damage;
         if (health < 0) {
-            Debug.Log("Givin " + pointValue * AutoSpawner.Instance.wave + " points");
-            Global.points += pointValue * AutoSpawner.Instance.wave;
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    void Die() {
+        isAlive = false;
+        Global.points += pointValue * AutoSpawner.Instance.wave;
+        Destroy(gameObject);
     }
 }
