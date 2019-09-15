@@ -1,5 +1,4 @@
 # Pointer Mace
-
 ![Title Image](/imgs/pointermace1.png)
 ![Gameplay Image](/imgs/pointermace2.png)
 
