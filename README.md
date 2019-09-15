@@ -1,7 +1,6 @@
 # Pointer Mace
-
-![Title Image](/imgs/pointermace1.png)
-![Gameplay Image](/imgs/pointermace2.png)
+![Title Image](imgs/pointermace1.PNG)
+![Gameplay Image](imgs/pointermace2.PNG)
 
 ### Intro
 Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Protect it at ALL COSTS!
@@ -9,7 +8,8 @@ Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Protect it a
 Wield your mace to fend off the enemies!
 
 ### Controls
-Mouse: Control mace (The faster your mace is moving, the more damage it does)
+Mouse: Control mace 
+*(The faster your mace is moving, the more damage it does)*
 
 ## [Click here to play Pointer Mace (HTML5)](https://fishwash.github.io/pointer-mace/)
 
