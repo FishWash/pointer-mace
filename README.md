@@ -7,7 +7,7 @@ Here, take this mace,
 ### Controls
 Mouse: Control mace
 
-## [Click here to play Pointer Mace(HTML5)](https://fishwash.github.io/pointer-mace/)
+## [Click here to play Pointer Mace (HTML5)](https://fishwash.github.io/pointer-mace/)
 
 ### Tools Used
 - Game Engine: [Unity](https://unity.com/)
