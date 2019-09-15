@@ -1,17 +1,17 @@
 # Pointer Mace
 
-Hero, the evil army of shapes is attacking!
+### Intro
+Hero, the evil army of shapes is attacking! They want to eat your MEAT! Protect it at ALL COSTS!
+Here, take this mace, 
 
-They want one thing:
-Your MEAT!
-
-Terrifying, I know. Here, take this mace, fight them off for as long as you can!
+### Controls
+Mouse: Control mace
 
 [Play it in your browser!](https://fishwash.github.io/pointer-mace/)
 
-## Tools Used:
-- [Unity](https://unity.com/)
-- [Aseprite](https://www.aseprite.org/)
-
-## Other Materials:
-- [Pixel Font](https://www.dafont.com/vcr-osd-mono.font)
+### Tools Used
+- Game Engine: [Unity](https://unity.com/)
+- Pixel Art: [Aseprite](https://www.aseprite.org/)
+- Sounds: [Freesound.org](https://freesound.org/) and [Audacity](https://www.audacityteam.org/)
+- Music: [LMMS](https://lmms.io/)
+- Font: [VCR OSD Mono](https://www.dafont.com/vcr-osd-mono.font)
