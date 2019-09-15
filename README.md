@@ -3,7 +3,7 @@
 ### Intro
 Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Thou must protect it at ALL COSTS!
 
-Wield your mace to fend off the enemies in retro physics action!
+Wield your mace to fend off the enemies!
 
 ### Controls
 Mouse: Control mace
