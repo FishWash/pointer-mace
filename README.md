@@ -1,5 +1,8 @@
 # Pointer Mace
 
+![Title Image](/imgs/pointermace1.png)
+![Gameplay Image](/imgs/pointermace2.png)
+
 ### Intro
 Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Thou must protect it at ALL COSTS!
 
