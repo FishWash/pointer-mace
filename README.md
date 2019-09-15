@@ -1,17 +1,21 @@
 # Pointer Mace
 
-Hero, the evil army of shapes is attacking!
+![Title Image](/imgs/pointermace1.png)
+![Gameplay Image](/imgs/pointermace2.png)
 
-They want one thing:
-Your MEAT!
+### Intro
+Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Protect it at ALL COSTS!
 
-Terrifying, I know. Here, take this mace, fight them off for as long as you can!
+Wield your mace to fend off the enemies!
 
-[Play it in your browser!](https://fishwash.github.io/pointer-mace/)
+### Controls
+Mouse: Control mace (The faster your mace is moving, the more damage it does)
 
-## Tools Used:
-- [Unity](https://unity.com/)
-- [Aseprite](https://www.aseprite.org/)
+## [Click here to play Pointer Mace (HTML5)](https://fishwash.github.io/pointer-mace/)
 
-## Other Materials:
-- [Pixel Font](https://www.dafont.com/vcr-osd-mono.font)
+### Tools Used
+- Game Engine: [Unity](https://unity.com/)
+- Pixel Art: [Aseprite](https://www.aseprite.org/)
+- Sounds: [Freesound.org](https://freesound.org/) and [Audacity](https://www.audacityteam.org/)
+- Music: [LMMS](https://lmms.io/)
+- Font: [VCR OSD Mono](https://www.dafont.com/vcr-osd-mono.font)
