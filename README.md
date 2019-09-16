@@ -3,9 +3,11 @@
 ![Gameplay Image](imgs/pointermace2.PNG)
 
 ### Intro
-Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Protect it at ALL COSTS!
+Hero, evil shapes attacketh! 
 
-Wield your mace to fend off the enemies!
+They wish to eat thy MEAT!
+
+Take up your mace, protect the meat at all costs!
 
 ### Controls
 Mouse: Control mace 
