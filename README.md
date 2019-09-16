@@ -7,7 +7,7 @@ Hero, evil shapes attacketh!
 
 They wish to eat thy MEAT!
 
-Take up your mace, protect the meat at all costs!
+Take up your mace, protect thy meat!
 
 ### Controls
 Mouse: Control mace 
