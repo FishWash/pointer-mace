@@ -18,6 +18,7 @@ Mouse: Control mace
 ### Tools Used
 - Game Engine: [Unity](https://unity.com/)
 - Pixel Art: [Aseprite](https://www.aseprite.org/)
+- Pixel Animations: [Juice FX](https://codemanu.itch.io/juicefx)
 - Sounds: [Freesound.org](https://freesound.org/) and [Audacity](https://www.audacityteam.org/)
 - Music: [LMMS](https://lmms.io/)
 - Font: [VCR OSD Mono](https://www.dafont.com/vcr-osd-mono.font)
