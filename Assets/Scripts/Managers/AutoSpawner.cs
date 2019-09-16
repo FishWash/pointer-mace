@@ -6,6 +6,8 @@ public class AutoSpawner : MonoBehaviour
 {
     public static AutoSpawner Instance;
 
+    public static bool debug = true;
+
     public int wave = 0;
 
     [SerializeField] GameObject dotPrefab = null;
@@ -39,6 +41,7 @@ public class AutoSpawner : MonoBehaviour
         triSpawnTimer = new Timer();
         waveTimer = new Timer();
         breakTimer = new Timer();
+        StartWave();
     }
 
     void Update() 
@@ -68,19 +71,26 @@ public class AutoSpawner : MonoBehaviour
             if (breakTimer.isDone) {
                 onBreak = false;
                 wave++;
-                waveTimer.SetTime(waveTime);
-                // Update time values according to wave.
-                // spawnTime has a fixed formula because 
-                // it can be adjusted with multipliers
-                spawnTime = 1/Mathf.Pow(1.1f, wave);
-                waveTime = baseWaveTime + waveTimeWaveMult*wave;
-                breakTime = baseBreakTime + breakTimeWaveMult*wave;
-
-                Debug.Log("===== WAVE " + wave + " =====");
-                Debug.Log("spawnTime: " + spawnTime);
-                Debug.Log("waveTime: " + waveTime);
-                Debug.Log("breakTime: " + breakTime);
+                StartWave();
             }
+        }
+    }
+
+    void StartWave() 
+    {
+        waveTimer.SetTime(waveTime);
+        // Update time values according to wave.
+        // spawnTime has a fixed formula because 
+        // it can be adjusted with multipliers
+        spawnTime = 1/Mathf.Pow(1.1f, wave);
+        waveTime = baseWaveTime + waveTimeWaveMult*wave;
+        breakTime = baseBreakTime + breakTimeWaveMult*wave;
+
+        if (debug) {
+            Debug.Log("===== WAVE " + wave + " =====");
+            Debug.Log("spawnTime: " + spawnTime);
+            Debug.Log("waveTime: " + waveTime);
+            Debug.Log("breakTime: " + breakTime);
         }
     }
 

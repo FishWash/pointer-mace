@@ -28,10 +28,10 @@ public class GameStateManager : MonoBehaviour
         bool escPressed = Input.GetKeyDown(KeyCode.Escape);
         if (escPressed) {
             if (Global.gameState == Global.GameState.Running) {
-                Global.gameState = Global.GameState.Paused;
+                PauseGame();
             }
             else if (Global.gameState == Global.GameState.Paused) {
-                Global.gameState = Global.GameState.Running;
+                UnPauseGame();
             }
         }
 

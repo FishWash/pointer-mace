@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pointer : MonoBehaviour
 {
-    public new Rigidbody2D rigidbody;
+    new Rigidbody2D rigidbody;
     public float moveSpeed = 5;
     Vector3 mouseLocation;
 
@@ -37,5 +37,7 @@ public class Pointer : MonoBehaviour
                 moveSpeed
             )   
         );
+
+        // transform.position = mouseLocation;
     }
 }

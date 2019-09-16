@@ -17,10 +17,14 @@ public class SoundManager : MonoBehaviour
         if (!soundSource) Debug.LogError("[SoundManager] No source!");
     }
 
+    public void PlayClip(AudioClip clip) {
+        PlayClip(clip, 1.0f, 1.0f);
+    }
+
     public void PlayClip(AudioClip clip, float volume, float pitch) {
-        if (soundSource && punchClip) {
+        if (soundSource && clip) {
             soundSource.pitch = pitch;
-            soundSource.PlayOneShot(punchClip, soundVolume*volume);
+            soundSource.PlayOneShot(clip, soundVolume*volume);
         }
         else {
             Debug.LogError("[SoundManager] No punch clip");
