@@ -35,27 +35,6 @@ public class GameStateManager : MonoBehaviour
             }
         }
 
-        // Set timescale based on game state
-        if (Global.gameState != lastGameState) 
-        {
-            switch(Global.gameState) 
-            {
-                case Global.GameState.Running:
-                    UnPauseGame();
-                    break;
-                case Global.GameState.Paused:
-                    PauseGame();
-                    break;
-                case Global.GameState.GameOver:
-                    PauseGame();
-                    break;
-                default:
-                    UnPauseGame();
-                    break;
-            }
-            lastGameState = Global.gameState;
-        }
-
         // Handle mouse click
         if (Input.GetMouseButtonDown(0)) {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -90,5 +69,11 @@ public class GameStateManager : MonoBehaviour
         Global.gameState = Global.GameState.Running;
         Time.timeScale = 1;
         MusicManager.Instance.UnPauseMusic();
+    }
+
+    public void GameOver()
+    {
+        Global.gameState = Global.GameState.GameOver;
+        MusicManager.Instance.PauseMusic();
     }
 }
