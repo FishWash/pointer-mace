@@ -3,9 +3,11 @@
 ![Gameplay Image](imgs/pointermace2.PNG)
 
 ### Intro
-Hero, the evil army of shapes attacketh! They wish to eat thy MEAT! Protect it at ALL COSTS!
+Hero, evil shapes attacketh! 
 
-Wield your mace to fend off the enemies!
+They wish to eat thy MEAT!
+
+Take up thy mace, protect thy meat!
 
 ### Controls
 Mouse: Control mace 
@@ -16,6 +18,7 @@ Mouse: Control mace
 ### Tools Used
 - Game Engine: [Unity](https://unity.com/)
 - Pixel Art: [Aseprite](https://www.aseprite.org/)
+- Pixel Animations: [Juice FX](https://codemanu.itch.io/juicefx)
 - Sounds: [Freesound.org](https://freesound.org/) and [Audacity](https://www.audacityteam.org/)
 - Music: [LMMS](https://lmms.io/)
 - Font: [VCR OSD Mono](https://www.dafont.com/vcr-osd-mono.font)
