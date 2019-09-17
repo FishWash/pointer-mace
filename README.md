@@ -1,4 +1,5 @@
-# Pointer Mace
+# [Pointer Mace](https://github.com/FishWash/pointer-mace)
+## ☝️ Click Here to Play in Browser(HTML5)
 ![Title Image](imgs/pointermace1.PNG)
 ![Gameplay Image](imgs/pointermace2.PNG)
 
