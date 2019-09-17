@@ -3,7 +3,7 @@
 ![Title Image](imgs/pointermace1.PNG)
 ![Gameplay Image](imgs/pointermace2.PNG)
 
-### Intro
+### Story
 Hero, evil shapes attacketh! 
 
 They wish to eat thy MEAT!
