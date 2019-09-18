@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This is the head of the mace. Handles collisions with enemies.
+*/
+
 public class HitCollider : MonoBehaviour
 {
     new Rigidbody2D rigidbody = null;

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/* 
+Enemy constantly tries to move towards the meat.
+Their moveSpeed and point value are adjusted based on the current wave.
+*/
+
 public class Enemy : Hittable
 {
     static bool debug = false;

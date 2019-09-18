@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Manages sounds. Keeps sounds from playing at the same time by putting them in a queue to be played.
+*/
+
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager Instance;

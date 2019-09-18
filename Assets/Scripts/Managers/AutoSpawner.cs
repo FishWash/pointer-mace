@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+The AutoSpawner is a big RNG machine that spawns enemies.
+It uses a bunch of variables that are designed to make the game harder as wave number increases.
+The next wave doesn't start until all enemies have been cleared.
+*/
+
 public class AutoSpawner : MonoBehaviour
 {
     public static AutoSpawner Instance;

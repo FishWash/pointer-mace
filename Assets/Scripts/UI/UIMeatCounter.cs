@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+UI element for keeping track of meat points
+*/
+
 public class UIMeatCounter : MonoBehaviour
 {
     [SerializeField] Goal goal = null;

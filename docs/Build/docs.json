@@ -1,7 +1,7 @@
 {
 "companyName": "Punko Games",
 "productName": "Pointer Mace",
-"productVersion": "1.6",
+"productVersion": "1.61",
 "dataUrl": "docs.data.unityweb",
 "wasmCodeUrl": "docs.wasm.code.unityweb",
 "wasmFrameworkUrl": "docs.wasm.framework.unityweb",

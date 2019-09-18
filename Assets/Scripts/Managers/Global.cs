@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+A global singleton class with important variables.
+*/
+
 public class Global : MonoBehaviour
 {
     public static Global Instance;

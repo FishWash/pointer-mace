@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Like a timer, but isn't affected by time factor.
+
 public class RealTimer : Timer
 {
     public new bool isDone {

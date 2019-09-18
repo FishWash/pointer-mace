@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Used for keeping track of clips with their volume and pitch.
+*/
+
 public class SoundFile 
 {
     public AudioClip clip;

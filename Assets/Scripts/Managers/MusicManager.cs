@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+This is used to play looping music.
+*/
+
 public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Displays the version number
+
 public class UIVersionNumber : MonoBehaviour
 {
     // Start is called before the first frame update

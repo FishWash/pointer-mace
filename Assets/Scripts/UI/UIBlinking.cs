@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Blinks the text of whatever it's attached to
+
 public class UIBlinking : MonoBehaviour
 {
     [SerializeField] float blinkTime = 1.0f;

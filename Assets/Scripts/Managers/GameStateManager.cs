@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+Changes to game state should go through here, using the public methods.
+*/
+
 public class GameStateManager : MonoBehaviour
 {
     public static GameStateManager Instance;
@@ -76,7 +80,7 @@ public class GameStateManager : MonoBehaviour
     public void GameOver()
     {
         Global.gameState = Global.GameState.GameOver;
-        MusicManager.Instance.PauseMusic();
+        // MusicManager.Instance.PauseMusic();
     }
 
     public void Retry()

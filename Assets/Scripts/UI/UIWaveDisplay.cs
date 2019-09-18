@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Displays the current wave
+
 public class UIWaveDisplay : MonoBehaviour
 {
     [SerializeField] string prefix = "";

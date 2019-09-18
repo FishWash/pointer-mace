@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// My custom script for timing game elements
+
 public class Timer
 {
     protected float endTime;

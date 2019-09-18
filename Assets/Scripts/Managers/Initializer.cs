@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Does startup stuff
+*/
+
 public class Initializer : MonoBehaviour
 {
     [SerializeField] MusicFile mainMusic = null;
