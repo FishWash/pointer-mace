@@ -1,8 +1,12 @@
 # Pointer Mace
+## [👉 Click Here to Play in Browser(HTML5)](https://fishwash.github.io/pointer-mace/)
+
 ![Title Image](imgs/pointermace1.PNG)
+
 ![Gameplay Image](imgs/pointermace2.PNG)
 
-### Intro
+### Story
+
 Hero, evil shapes attacketh! 
 
 They wish to eat thy MEAT!
@@ -10,12 +14,14 @@ They wish to eat thy MEAT!
 Take up thy mace, protect thy meat!
 
 ### Controls
+
 Mouse: Control mace 
 *(The faster your mace is moving, the more damage it does)*
 
-## [Click here to play Pointer Mace (HTML5)](https://fishwash.github.io/pointer-mace/)
+Esc: Pause
 
 ### Tools Used
+
 - Game Engine: [Unity](https://unity.com/)
 - Pixel Art: [Aseprite](https://www.aseprite.org/)
 - Pixel Animations: [Juice FX](https://codemanu.itch.io/juicefx)
