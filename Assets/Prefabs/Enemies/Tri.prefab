@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 7515988230127539478}
   - component: {fileID: 7515988230127539464}
   - component: {fileID: 1612117214219571272}
-  - component: {fileID: 7515988230127539465}
   - component: {fileID: 7515988230127539477}
   m_Layer: 12
   m_Name: Tri
@@ -164,19 +163,6 @@ PolygonCollider2D:
     - - {x: -0.5, y: 0.5}
       - {x: -0.5, y: -0.5}
       - {x: 0.5, y: 0}
---- !u!114 &7515988230127539465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7515988230127539476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4967c4c182cbc67418ca527d68cb3051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 4
 --- !u!114 &7515988230127539477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +176,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  pointValue: 4
+  basePoints: 0
+  pointsFactor: 5
+  baseMoveSpeed: 5
+  moveSpeedFactor: 0.3
+  damage: 10
   dieEffect: {fileID: 5726939147327057384, guid: 83e50a3ce1463304cb67d9cf8d10d6e4,
     type: 3}
   isAlive: 0

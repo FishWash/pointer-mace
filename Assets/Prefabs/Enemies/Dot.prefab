@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 7515988230127539478}
   - component: {fileID: 7515988230127539464}
   - component: {fileID: 7515988230127539479}
-  - component: {fileID: 7515988230127539465}
   - component: {fileID: 7515988230127539477}
   - component: {fileID: 4471266141498571770}
   m_Layer: 12
@@ -153,19 +152,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7515988230127539465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7515988230127539476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4967c4c182cbc67418ca527d68cb3051, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
 --- !u!114 &7515988230127539477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,7 +165,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  pointValue: 1
+  basePoints: 0
+  pointsFactor: 1
+  baseMoveSpeed: 3
+  moveSpeedFactor: 0.2
+  damage: 5
   dieEffect: {fileID: 5726939147327057384, guid: ec12007a6813ec247a8a94468876eb38,
     type: 3}
   isAlive: 0

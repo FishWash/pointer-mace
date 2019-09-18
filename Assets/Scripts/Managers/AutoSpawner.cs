@@ -9,10 +9,15 @@ public class AutoSpawner : MonoBehaviour
     public static bool debug = true;
 
     public int wave = 0;
+    public static int lastCompletedWave;
+
+    int enemyCount = 0;
 
     [SerializeField] GameObject dotPrefab = null;
     [SerializeField] GameObject blockPrefab = null;
     [SerializeField] GameObject triPrefab = null;
+
+    [SerializeField] AudioClip waveStartClip = null;
 
     [SerializeField] float spawnDistance = 16.0f;
 
@@ -23,11 +28,10 @@ public class AutoSpawner : MonoBehaviour
     [SerializeField] float baseWaveTime = 10.0f;
     [SerializeField] float waveTimeWaveMult = 2.0f;
 
-    [SerializeField] float baseBreakTime = 5.0f;
-    [SerializeField] float breakTimeWaveMult = 0.1f;
+    [SerializeField] float breakTime = 3.0f;
     bool onBreak = true;
 
-    float spawnTime, waveTime, breakTime;
+    float spawnTime, waveTime;
     Timer dotSpawnTimer, blockSpawnTimer, triSpawnTimer, 
         waveTimer, breakTimer;
 
@@ -41,56 +45,66 @@ public class AutoSpawner : MonoBehaviour
         triSpawnTimer = new Timer();
         waveTimer = new Timer();
         breakTimer = new Timer();
-        StartWave();
+        // StartNextWave();
+
+        if (lastCompletedWave > 0) {
+            Debug.Log("restarting at wave " + lastCompletedWave);
+            wave = lastCompletedWave;
+        }
     }
 
     void Update() 
     {
-        if (Global.gameState != Global.GameState.Running) return;
-
-        if (!onBreak) {
-            if (dotSpawnTimer.isDone && dotPrefab) {
-                RandomSpawnInSemiCircle(dotPrefab);
-                dotSpawnTimer.SetTime(spawnTime*dotSpawnTimeMult);
+        if (Global.gameState == Global.GameState.Running) 
+        {
+            if (onBreak) {
+                if (breakTimer.isDone) {
+                    StartNextWave();
+                    onBreak = false;
+                }
             }
-            if (wave >= 3 && blockSpawnTimer.isDone && blockPrefab) {
-                RandomSpawnInSemiCircle(blockPrefab);
-                blockSpawnTimer.SetTime(spawnTime*blockSpawnTimeMult);
-            } 
-            if (wave >= 5 && triSpawnTimer.isDone && triPrefab) {
-                RandomSpawnInSemiCircle(triPrefab);
-                triSpawnTimer.SetTime(spawnTime*triSpawnTimeMult);
-            } 
-            if (waveTimer.isDone) {
-                onBreak = true;
-                breakTimer.SetTime(breakTime);
-                Debug.Log("- BREAK -");
-            }
-        }
-        else {
-            if (breakTimer.isDone) {
-                onBreak = false;
-                wave++;
-                StartWave();
+            else if (!waveTimer.isDone) {
+                if (dotSpawnTimer.isDone && dotPrefab) {
+                    RandomSpawnInSemiCircle(dotPrefab);
+                    dotSpawnTimer.SetTime(spawnTime*dotSpawnTimeMult);
+                }
+                if (wave >= 3 && blockSpawnTimer.isDone && blockPrefab) {
+                    RandomSpawnInSemiCircle(blockPrefab);
+                    blockSpawnTimer.SetTime(spawnTime*blockSpawnTimeMult);
+                } 
+                if (wave >= 5 && triSpawnTimer.isDone && triPrefab) {
+                    RandomSpawnInSemiCircle(triPrefab);
+                    triSpawnTimer.SetTime(spawnTime*triSpawnTimeMult);
+                }
             }
         }
+ 
     }
 
-    void StartWave() 
+    public void StartNextWave() 
     {
-        waveTimer.SetTime(waveTime);
-        // Update time values according to wave.
-        // spawnTime has a fixed formula because 
-        // it can be adjusted with multipliers
+        // Start with last wave completed
+        if (wave < lastCompletedWave) {
+            wave = lastCompletedWave;
+        }
+        else {
+            lastCompletedWave = wave;
+            wave++;
+        }
+
+        // Set variables for spawner
         spawnTime = 1/Mathf.Pow(1.1f, wave);
         waveTime = baseWaveTime + waveTimeWaveMult*wave;
-        breakTime = baseBreakTime + breakTimeWaveMult*wave;
+        waveTimer.SetTime(waveTime);
+
+        if (waveStartClip) {
+            SoundManager.Instance.PlayClip(waveStartClip);
+        }
 
         if (debug) {
             Debug.Log("===== WAVE " + wave + " =====");
-            Debug.Log("spawnTime: " + spawnTime);
-            Debug.Log("waveTime: " + waveTime);
-            Debug.Log("breakTime: " + breakTime);
+            Debug.Log("Spawn Time Factor: " + spawnTime);
+            Debug.Log("Wave Time: " + waveTime);
         }
     }
 
@@ -104,6 +118,20 @@ public class AutoSpawner : MonoBehaviour
             Quaternion.AngleAxis(inverseAngle, Vector3.forward);
         Vector3 spawnPosition = rotation * new Vector3(spawnDistance, 0, 0);
 
+        enemyCount++;
+        
         Instantiate(prefab, spawnPosition, inverseRotation);
+    }
+
+    public void EnemyDied() {
+        enemyCount--;
+        if (enemyCount <= 0 && Global.gameState == Global.GameState.Running) {
+            onBreak = true;
+            breakTimer.SetTime(breakTime);
+        }
+    }
+
+    public void Reset() {
+        lastCompletedWave = 0;
     }
 }

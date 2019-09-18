@@ -17,12 +17,17 @@ public class HitCollider : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy")) 
         {
             Hittable hittable = other.gameObject.GetComponent<Hittable>();
-            if (hittable != null && rigidbody != null && rigidbody.velocity.magnitude > 10.0f) {
+            if (hittable != null && rigidbody != null && rigidbody.velocity.magnitude > 10.0f) 
+            {
+                //Damage the enemy
                 hittable.Hit(rigidbody.velocity, rigidbody.mass);
+                // Make a hit spark
                 Quaternion hitsparkRotation = Quaternion.identity;
                 hitsparkRotation.SetLookRotation(rigidbody.velocity);
                 Global.InstantiateHitspark(transform.position, hitsparkRotation);
-                SoundManager.Instance.PlayClip(punchClip, 1.0f, (90 - rigidbody.velocity.magnitude) * pitchMult);
+                // Play sound
+                float pitch = (30 + rigidbody.velocity.magnitude*0.3f) * pitchMult;
+                SoundManager.Instance.PlayClip(punchClip, 1.0f, pitch);
                 Debug.Log("[HitCollider] Hit for " + rigidbody.velocity.magnitude);
             }
         }

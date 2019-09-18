@@ -17,7 +17,7 @@ public class GameStateManager : MonoBehaviour
     void Awake() {
         Instance = this;
         if (Global.gameState == Global.GameState.Off) {
-            Global.gameState = Global.GameState.Title;
+            Global.gameState = Global.GameState.Start;
         }
     }
 
@@ -42,19 +42,21 @@ public class GameStateManager : MonoBehaviour
             {
                 switch(Global.gameState) 
                 {
-                    case Global.GameState.Title:
-                        Global.gameState = Global.GameState.Running;
+                    case Global.GameState.Start:
+                        StartGame();
                         break;
                     case Global.GameState.GameOver:
-                        Global.gameState = Global.GameState.Running;
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                        break;
-                    default:
+                        GameOver();
                         break;
                 }
             }
         }
 
+    }
+
+    public void StartGame()
+    {
+        Global.gameState = Global.GameState.Running;
     }
 
     public void PauseGame() 
@@ -75,5 +77,20 @@ public class GameStateManager : MonoBehaviour
     {
         Global.gameState = Global.GameState.GameOver;
         MusicManager.Instance.PauseMusic();
+    }
+
+    public void Retry()
+    {
+        Global.gameState = Global.GameState.Running;
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void BackToTitle()
+    {
+        AutoSpawner.Instance.Reset();
+        Time.timeScale = 1;
+        Global.gameState = Global.GameState.Start;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
