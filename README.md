@@ -1,5 +1,5 @@
 # Pointer Mace
-## [👉 Click Here to Play(in-browser)](https://fishwash.github.io/pointer-mace/)
+## [👉 Click Here to Play(in-browser)](https://jfox16.github.io/pointer-mace/)
 
 ![Title Image](imgs/pointermace1.PNG)
 
